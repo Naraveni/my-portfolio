@@ -8,23 +8,23 @@ import Experience from "./Experience";
 
 export const HomePage = () => {
   return (
-    <div className="h-screen w-screen snap-y snap-mandatory scroll-smooth pr-52 ">
-      <div className="snap-start">
+    <div className="h-screen w-screen snap-y snap-mandatory scroll-smooth overflow-y-scroll pr-52">
+      <div className="snap-start h-screen">
         <AboutMe />
       </div>
-      <div className="snap-start">
+      <div className="snap-start h-screen">
         <Experience />
       </div>
-      <div className="snap-start">
+      <div className="snap-start h-screen">
         <Projects />
       </div>
-      <div className="snap-start">
+      <div className="snap-start h-screen">
         <Skills />
       </div>
-      <div className="snap-start">
+      <div className="snap-start h-screen">
         <Resume />
       </div>
-      <div className="snap-start">
+      <div className="snap-start h-screen">
         <Contact />
       </div>
     </div>
