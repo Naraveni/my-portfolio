@@ -45,6 +45,20 @@ const skills = [
   "Rspec",
 ];
 
+
+const hoverColors = [
+    "hover:bg-amber-600",  // Ruby On Rails
+    "hover:bg-cyan-900",   // React Js
+    "hover:bg-blue-600",   // JavaScript
+    "hover:bg-green-700",  // Redux
+    "hover:bg-purple-600", // Postgresql
+    "hover:bg-gray-600",   // Linux
+    "hover:bg-red-600",    // AWS
+    "hover:bg-blue-500",   // Jira
+    "hover:bg-blue-600",   // GitHub
+    "hover:bg-yellow-600", // Python
+    "hover:bg-cyan-900",   // Rspec
+  ];
 const Skills = () => {
   const [inView, setInView] = useState(false);
 
@@ -73,6 +87,7 @@ const Skills = () => {
           const skillKey = skill.toLowerCase().replace(/\s+/g, "_"); // Transform skill name to match import key
           const icon = skillIcons[skillKey]; // Lookup the icon dynamically
           const direction = index % 2 === 0 ? "100vw" : "-100vw";
+          const hoverColor = hoverColors[index]; 
 
           return (
             <motion.div
@@ -81,7 +96,7 @@ const Skills = () => {
             animate={{ x: inView ? 0 : direction, opacity: inView ? 1 : 0 }}
             transition={{ type: "spring", stiffness: 50, duration: 1, delay: index * 0.1 }}
           >
-              <WiredCard className="p-8 flex justify-center items-center rounded-lg shadow-lg hover:bg-gray-700 hover:text-white">
+              <WiredCard className={`p-8 flex justify-center items-center rounded-lg shadow-lg hover:text-white ${hoverColor}`}>
                 <div className="flex flex-col items-center">
                   {icon && <img src={icon} alt={`${skill} icon`} className="w-16 h-16 mb-4" />}
                   <span className="text-xl font-semibold">{skill}</span>
