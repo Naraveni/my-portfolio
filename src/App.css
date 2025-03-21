@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: 'CustomFont';
-  src: url('src/assets/SketchBook-B5pB.ttf') format('truetype');
+  src: url('/src/assets/SketchBook-B5pB.ttf') format('truetype');
   font-weight:bolder;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ParagraphFont';
-  src: url('src/assets/DomesticPigeon.otf') format('truetype');
+  src: url('/src/assets/DomesticPigeon.otf') format('truetype');
   font-weight:bold;
   font-style: normal;
 }

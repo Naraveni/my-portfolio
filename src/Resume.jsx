@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { WiredButton } from 'wired-elements-react';
+import resume from '/src/assets/my_resume.png'
 
 const Resume = () => {
   const [inView, setInView] = useState(false);
@@ -38,7 +39,7 @@ const Resume = () => {
   return (
     <section
       id="resume"
-      className="min-h-screen flex flex-col items-center px-4 pt-12"
+      className="min-h-screen flex flex-col items-center px-4 py-8"
     >
       <h2 className="text-5xl font-bold mb-6 text-center">Resume</h2>
 
@@ -50,7 +51,7 @@ const Resume = () => {
       >
         {/* Resume Image */}
         <img
-          src="/src/assets/my_resume.png"
+          src={resume}
           alt="My Resume"
           className="w-1/3 h-auto mb-4 md:mb-0"
         />

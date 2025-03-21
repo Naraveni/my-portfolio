@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { WiredCard, WiredButton } from "wired-elements-react"; // Import WiredButton
+import { WiredCard, WiredButton } from "wired-elements-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
+// Import images
+import vsCodeImage from "/src/assets/Vs_code_project.png";
+import visaSodharaImage from "/src/assets/visa.jpg";
+import openSourceImage from "/src/assets/ruby_for_good.png";
 
 const projects = [
   {
     id: "vsCode",
     title: "VS Code Extension - Code Highlighter",
-    image: "/src/assets/Vs_code_project.png",
+    image: vsCodeImage, // Use imported image
     description:
       "I created a VS Code extension that allows users to highlight code with different colors, just like text.",
     links: [
@@ -18,7 +23,7 @@ const projects = [
   {
     id: "visaSodhara",
     title: "VisaSodhara.com",
-    image: "/src/assets/visa.jpg",
+    image: visaSodharaImage, // Use imported image
     description:
       "A platform for Indian international students to share visa experiences, connect with alumni, and stay updated.",
     links: [
@@ -29,7 +34,7 @@ const projects = [
   {
     id: "openSource",
     title: "Open Source Contributions",
-    image: "/src/assets/ruby_for_good.png",
+    image: openSourceImage, // Use imported image
     description:
       "Contributions to open-source projects like Pet Rescue Mine and Ruby For Good to help animals and people in need.",
     links: [
