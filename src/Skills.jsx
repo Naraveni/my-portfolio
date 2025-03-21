@@ -72,14 +72,15 @@ const Skills = () => {
         {skills.map((skill, index) => {
           const skillKey = skill.toLowerCase().replace(/\s+/g, "_"); // Transform skill name to match import key
           const icon = skillIcons[skillKey]; // Lookup the icon dynamically
+          const direction = index % 2 === 0 ? "100vw" : "-100vw";
 
           return (
             <motion.div
-              key={index}
-              initial={{ x: "100vw", opacity: 0 }}
-              animate={{ x: inView ? 0 : "100vw", opacity: inView ? 1 : 0 }}
-              transition={{ type: "spring", stiffness: 50, duration: 1, delay: index * 0.1 }}
-            >
+            key={index}
+            initial={{ x: direction, opacity: 0 }}
+            animate={{ x: inView ? 0 : direction, opacity: inView ? 1 : 0 }}
+            transition={{ type: "spring", stiffness: 50, duration: 1, delay: index * 0.1 }}
+          >
               <WiredCard className="p-8 flex justify-center items-center rounded-lg shadow-lg hover:bg-gray-700 hover:text-white">
                 <div className="flex flex-col items-center">
                   {icon && <img src={icon} alt={`${skill} icon`} className="w-16 h-16 mb-4" />}
