@@ -3,7 +3,7 @@ import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Resume from "./Resume";
-import Contact from "./contact";
+import Contact from "./Contact";
 import Experience from "./Experience";
 
 export const HomePage = () => {
