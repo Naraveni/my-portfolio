@@ -8,7 +8,7 @@ import Experience from "./Experience";
 
 export const HomePage = () => {
   return (
-    <div className="h-screen w-screen snap-y snap-mandatory scroll-smooth overflow-y-scroll pr-52">
+    <div className="h-screen w-full snap-y snap-mandatory scroll-smooth overflow-y-scroll">
       <div className="snap-start h-screen">
         <AboutMe />
       </div>
