@@ -2,6 +2,7 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  overflow-x: hidden;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -26,8 +27,10 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 100vw; /* Ensure full width */
   min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 100%; /* Avoid overflow beyond viewport */
 }
 
 h1 {
@@ -46,9 +49,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -67,4 +72,20 @@ button:focus-visible {
   }
 }
 
+/* Ensuring no horizontal overflow on any container */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+img,
+video {
+  max-width: 100%; /* Prevent images/videos from overflowing */
+  height: auto;
+}
+
+.container, .content, .flex {
+  max-width: 100%;
+  overflow-x: hidden;
+}

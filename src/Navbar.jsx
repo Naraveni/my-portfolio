@@ -1,41 +1,77 @@
-import { WiredButton, WiredInput } from 'wired-elements-react';
+import { useState } from "react";
+import { WiredButton } from "wired-elements-react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const hoverColors = [
+    "hover:bg-blue-500/100",
+    "hover:bg-red-500/100",
+    "hover:bg-green-500/100",
+    "hover:bg-yellow-500/100",
+    "hover:bg-purple-500/100",
+    "hover:bg-pink-500/100",
+  ];
+
+  const menuItems = [
+    { name: "About", path: "/about" },
+    { name: "Experience", path: "/experience" },
+    { name: "Projects", path: "/projects" },
+    { name: "Skills", path: "/skills" },
+    { name: "Resume", path: "/resume" },
+    { name: "Contact", path: "/contact" }
+  ];
+
   return (
     <div className="bg-gray-300 text-black fixed bottom-0 left-0 w-full z-10">
-      {/* Navbar container using Tailwind for layout */}
-      <div className="flex items-center justify-between p-4">
-        
-        {/* Navigation Links */}
-        <div className="hidden sm:flex space-x-8 justify-center w-full">
-          <a href="#about">
-            <WiredButton className="bg-white-700 hover:bg-amber-600 text-black hover:text-white text-xl" label="About">About</WiredButton> 
-          </a>
-          <a href="#experience">
-            <WiredButton className="bg-white-700 hover:bg-cyan-900 text-black hover:text-white text-xl " label="Experience">Experience</WiredButton> 
-          </a>
-          <a href="#projects">
-            <WiredButton className="bg-white-700 hover:bg-blue-600 text-black hover:text-white text-xl" label="Projects">Projects</WiredButton> 
-          </a>
-          <a href="#skills">
-            <WiredButton className="bg-white-700 hover:bg-blue-600 text-black hover:text-white text-xl" label="Skills">Skills</WiredButton> 
-          </a>
-          <a href="#resume">
-            <WiredButton className="bg-white-700 hover:bg-green-700 text-black hover:text-white  text-xl" label="Resume">Resume</WiredButton> 
-          </a>
-          <a href="#contact">
-            <WiredButton className="bg-white-700 hover:bg-gray-600 text-black hover:text-white text-xl" label="Contact">Contact</WiredButton> 
-          </a>
-          
-        </div>
+      {/* Desktop Navbar */}
+      <div className="hidden sm:flex justify-center w-full p-4">
+        {menuItems.map((item, index) => (
+          <Link key={index} to={item.path}>
+            <WiredButton
+              className={` text-black text-xl mx-2 
+              ${hoverColors[index]} hover:text-white transition-all duration-300
+               `}
 
-        {/* Mobile menu icon */}
-        <div className="sm:hidden flex items-center">
-          <button className="text-black text-2xl">
-            {/* Mobile menu icon (you can replace it with an icon library like FontAwesome) */}
-            ☰
-          </button>
-        </div>
+            >
+              {item.name}
+            </WiredButton>
+          </Link>
+        ))}
+      </div>
+
+      {/* Mobile Menu Icon */}
+      <div className="sm:hidden flex justify-between items-center p-4">
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="text-black text-2xl"
+        >
+          {isMenuOpen ? "✖" : "☰"}
+        </button>
+      </div>
+
+      {/* Mobile Menu with Better UX */}
+      <div
+        className={`fixed top-0 left-0 w-full bg-gray-300 transition-transform duration-300 p-6 flex flex-col items-center space-y-4 
+        ${isMenuOpen ? "translate-y-0" : "-translate-y-full"} max-h-screen overflow-y-auto`}
+      >
+        {menuItems.map((item, index) => (
+          <Link
+            key={index}
+            to={item.path}
+            onClick={() => {
+              setActiveIndex(index);
+              setIsMenuOpen(false);
+            }}
+            className={`text-xl font-semibold transition p-4 w-full text-center rounded-lg 
+              ${activeIndex === index ? "bg-amber-600 text-white" : "text-black"} 
+              hover:bg-blue-500 hover:text-white`}
+          >
+            {item.name}
+          </Link>
+        ))}
       </div>
     </div>
   );
