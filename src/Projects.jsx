@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { WiredCard, WiredButton } from "wired-elements-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import RubyForGood from '/src/assets/ruby_for_good.png'
+import Vscode from '/src/assets/Vs_code_project.png'
+import Visa from '/src/assets/visa.jpg'
 
 const projects = [
   {
     id: "vsCode",
     title: "VS Code Extension - Code Highlighter",
-    image: "/src/assets/Vs_code_project.png",
+    image: Vscode,
     description:
       "I created a VS Code extension that allows users to highlight code with different colors, just like text.",
     links: [
@@ -18,7 +21,7 @@ const projects = [
   {
     id: "visaSodhara",
     title: "VisaSodhara.com",
-    image: "/src/assets/visa.jpg",
+    image: Visa,
     description:
       "A platform for Indian international students to share visa experiences, connect with alumni, and stay updated.",
     links: [
@@ -29,7 +32,7 @@ const projects = [
   {
     id: "openSource",
     title: "Open Source Contributions",
-    image: "/src/assets/ruby_for_good.png",
+    image: RubyForGood,
     description:
       "Contributions to open-source projects like Pet Rescue Mine and Ruby For Good to help animals and people in need.",
     links: [
@@ -63,7 +66,7 @@ const Projects = () => {
         {/* Left arrow button */}
         <WiredButton
           onClick={prevProject}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-10"
+          className="absolute left-2 top-1/2 -translate-y-1/2 md:z-10 lg:z-10"
           style={{ zIndex: 10 }}
         >
           <ChevronLeft size={36} />
@@ -102,7 +105,7 @@ const Projects = () => {
         </AnimatePresence>
         <WiredButton
           onClick={nextProject}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-10"
+          className="absolute right-2 top-1/2 -translate-y-1/2  md:z-10 lg:z-10"
           style={{ zIndex: 10 }}
         >
           <ChevronRight size={36} />
