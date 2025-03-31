@@ -55,7 +55,7 @@ const Resume = () => {
           className="md:w-1/4 lg:w-1/4 sm:w-1/4 sm:h-1/3 mb-4 md:mb-0"
         />
         <a
-          href="https://drive.google.com/file/d/1wKWw_Z6G1-DeVKjgILsFH-jzben6RARh/view?usp=sharing"
+          href="https://drive.usercontent.google.com/u/0/uc?id=1wKWw_Z6G1-DeVKjgILsFH-jzben6RARh&export=download"
           download
           className="flex justify-center mt-4 md:mt-0"
         >
