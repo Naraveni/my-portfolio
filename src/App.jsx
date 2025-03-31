@@ -5,7 +5,8 @@ import HomePage from "./HomePage";
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta
+      .env.BASE_URL}>
       <div className="overflow-x-hidden">
         <NavBar />
         <Routes>
