@@ -12,9 +12,9 @@ const Contact = () => {
 
   useEffect(() => {
     const options = {
-      root: null, // Use the viewport as the root
+      root: null,
       rootMargin: '0px',
-      threshold: 0.5, // Trigger when 50% of the section is visible
+      threshold: 0.5, 
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -43,7 +43,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen bg-gradient-to-r text-black flex flex-col items-center md:px-6 md:pt-14 lg:px-6 lg:pt-12 pt-14 "
+      className=" bg-gradient-to-r text-black flex flex-col items-centre md:px-6 lg:px-6 mb-60"
     >
       <h2 className="text-3xl sm:text-4xl md:text-5xl underline font-bold mb-8 text-center text-black">
         Let's Get in Touch
@@ -56,9 +56,9 @@ const Contact = () => {
           scale: inView ? 1 : 0.8,
         }}
         transition={{ type: 'spring', stiffness: 50, duration: 2 }}
-        className="flex flex-col items-center space-y-8 sm:space-y-6 md:w-1/2 sm:w-full p-4"
+        className="flex flex-col items-center space-y-8 sm:space-y-6 md:w-full sm:w-full p-4"
       >
-        <div className="text-lg sm:text-sm flex items-center space-x-4 transition-all hover:scale-150">
+        <div className="text-lg sm:text-base flex items-center space-x-4 transition-all hover:scale-150">
           <img
             src={EmailIcon}
             alt="Email"
@@ -132,7 +132,7 @@ const Contact = () => {
       </motion.div>
 
       <div className="mt-12 text-center">
-        <p className="text-xl sm:text-lg text-white">
+        <p className="text-xl sm:text-lg text-gray-700">
           Feel free to reach out for collaborations, questions, or just to say hi!
         </p>
       </div>
