@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 // Import SVGs
 import LinkedInIcon from '/src/assets/linkedin.svg';

@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { WiredButton } from 'wired-elements-react';
-import resume from '/src/assets/my_resume.png'
+import { RESUME, RESUME_IMAGE } from './utils/constants';
 
 const Resume = () => {
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
     const options = {
-      root: null, // Use the viewport as the root
+      root: null,
       rootMargin: '0px',
-      threshold: 0.5, // Trigger when 50% of the section is visible
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -23,7 +23,6 @@ const Resume = () => {
       });
     }, options);
 
-    // Observe the resume section
     const section = document.getElementById('resume');
     if (section) {
       observer.observe(section);
@@ -50,12 +49,12 @@ const Resume = () => {
         className="flex flex-col md:flex-row items-center justify-around max-w-4xl"
       >
         <img
-          src={resume}
+          src={RESUME_IMAGE}
           alt="My Resume"
           className="md:w-1/4 lg:w-1/4 sm:w-1/4 sm:h-1/3 mb-4 md:mb-0"
         />
         <a
-          href="https://drive.usercontent.google.com/u/0/uc?id=1wKWw_Z6G1-DeVKjgILsFH-jzben6RARh&export=download"
+          href={RESUME}
           download
           className="flex justify-center mt-4 md:mt-0"
         >
