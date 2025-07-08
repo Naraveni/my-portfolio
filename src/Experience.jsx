@@ -3,53 +3,50 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    title: "Teaching Assistant | University of New Haven",
-    location: "New Haven, CT",
-    duration: "Aug 2024 - Present",
-    description: [
-      "Conducted lectures and contributed to course material development, assisting students in Python, SQL, C, C++, MySQL, Networking.",
-      "Developed strong mentoring, communication, and creative thinking while interacting with students and professors.",
-    ],
-    hoverColor: "hover:bg-[#F56565]",
-    activeColor: "bg-[#F56565]", // Active background color
-  },
-  {
-    title: "Software Developer | Zaggle Prepaid Services Pvt. Ltd",
+    title: "Full Stack Developer | Zaggle Prepaid Ocean Services Pvt. Ltd",
     location: "Hyderabad, India",
-    duration: "Sep 2022 - July 2023",
+    duration: "Feb 2022 – Jul 2023",
     description: [
-      "Developed and maintained a scalable fintech product supporting 2.89 million users and 50 million prepaid cards issued.",
-      "Interacted with over 50+ clients monthly, gathering feedback and ensuring successful feature implementation.",
-      "Integrated SAP for major clients with 25,000+ users, streamlining processes and improving efficiency.",
-      "Developed a multifunctional API for onboarding employees and reviewed over 60+ PRs for production.",
+      "Designed and developed responsive web applications using Ruby on Rails, React.js, Redux, TypeScript, and JavaScript, improving frontend load times by 30%.",
+      "Built modular, reusable UI components and frontend libraries, accelerating team development.",
+      "Integrated multiple RESTful APIs, enabling seamless microservices orchestration and supporting 10,000+ daily transactions.",
+      "Implemented JWT-based authentication and role-based access control, following OWASP standards.",
+      "Collaborated with QA teams to support integration and regression testing using RSpec and Capybara.",
+      "Resolved critical production issues and improved turnaround time on user-reported bugs.",
     ],
     hoverColor: "hover:bg-[#4ADC7F]",
-    activeColor: "bg-[#4ADC7F]", // Active background color
+    activeColor: "bg-[#4ADC7F]",
   },
   {
-    title: "Intern-Developer | Zaggle Prepaid Services Pvt. Ltd",
+    title: "Full Stack Developer Intern | Zaggle Prepaid Ocean Services Pvt. Ltd",
     location: "Hyderabad, India",
-    duration: "Feb 2022 - Aug 2022",
+    duration: "Sep 2021 – Dec 2021",
     description: [
-      "Resolved over 300+ bugs, enhancing software stability and user experience.",
-      "Integrated Travel Expenses API with a major client’s travel booking platform, syncing employee data.",
-      "Developed APIs for iOS and Android apps.",
+      "Integrated a Travel Expenses API for 10,000+ employee records, improving sync efficiency by 40%.",
+      "Developed and deployed backend APIs for mobile platforms, increasing user engagement by 25%.",
+      "Debugged and resolved 300+ bugs and UI inconsistencies, reducing system errors by 50%.",
+      "Contributed to GraphQL prototypes and service modularization initiatives.",
+      "Collaborated with cross-functional teams using Git, RSpec, and Agile workflows.",
     ],
     hoverColor: "hover:bg-[#BE83FA]",
-    activeColor: "bg-[#BE83FA]", // Active background color
+    activeColor: "bg-[#BE83FA]",
   },
   {
-    title: "Intern-Developer | Zaggle Prepaid Services Pvt. Ltd",
-    location: "Hyderabad, India",
-    duration: "Jun 2021 - Sep 2021",
+    title: "Teaching Assistant | University of New Haven",
+    location: "West Haven, CT",
+    duration: "Aug 2024 – May 2025",
     description: [
-      "Received hands-on training in Ruby on Rails and React JS and resolved more than 100+ bugs.",
-      "Attended numerous client meetings, gaining insights into corporate work culture and enhancing communication and teamwork skills.",
+      "Supported courses in Algorithms, Data Structures, Databases, and Web Development for 80+ students.",
+      "Led lab sessions and provided one-on-one guidance in Python, SQL, JavaScript, and C/C++.",
+      "Mentored 20+ capstone projects with focus on data structures and frontend development.",
+      "Reviewed student code to ensure quality and adherence to academic standards.",
+      "Contributed to assignment design, grading, and classroom activities, improving project success rate by 30%.",
     ],
-    hoverColor: "hover:bg-[#CB99FF]",
-    activeColor: "bg-[#CB99FF]", // Active background color
+    hoverColor: "hover:bg-[#F56565]",
+    activeColor: "bg-[#F56565]",
   },
 ];
+
 
 const Experience = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -105,7 +102,7 @@ const Experience = () => {
 
             {/* Description Visibility Fix */}
             <div
-              className={`mt-2 space-y-2 ${
+              className={`mt-2 space-y-2 font-bold ${
                 isMobile || isTablet
                   ? activeIndex === index
                     ? "block"

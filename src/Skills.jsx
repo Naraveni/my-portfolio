@@ -1,38 +1,36 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ruby_on_rails from "/src/assets/ruby_on_rails.svg";
-import react_js from "/src/assets/react_js.svg";
-import javascript from "/src/assets/javascript.svg";
-import redux from "/src/assets/redux.svg";
-import postgresql from "/src/assets/postgresql.svg";
-import linux from "/src/assets/linux.svg";
-import aws from "/src/assets/aws.svg";
-import jira from "/src/assets/jira.svg";
-import github from "/src/assets/github.svg";
-import python from "/src/assets/python.svg";
-import rspec from "/src/assets/rspec.svg";
+import { STATIC_ASSESTS } from "./utils/constants";
 
 // Categorized Skills Data
-const icons = [ruby_on_rails, javascript, redux, postgresql, linux, aws, jira, github, python, rspec, react_js];
+
+
 const skillCategories = {
   Frontend: [
-    { name: "React.js", icon: react_js, description: "Used extensively to build fintech products throughout my career and continue leveraging it for personal projects." },
-    { name: "JavaScript", icon: javascript, description: "Developed high-performance, interactive components for seamless user engagement." },
-    { name: "Redux", icon: redux, description: "Implemented scalable state management solutions for fintech applications and continue using it in personal projects." },
-  ],
-  Backend: [
-    { name: "Ruby on Rails", icon: ruby_on_rails, description: "Designed and optimized RESTful APIs, ensuring high reliability and performance." },
-    { name: "PostgreSQL", icon: postgresql, description: "Structured robust and scalable database models, powering critical operations." },
-    { name: "Python", icon: python, description: "Developed automation scripts and backend services, streamlining workflows." },
-    { name: "Rspec", icon: rspec, description: "Wrote comprehensive test suites, ensuring the stability and reliability of backend services." },
-  ],
-  "Cloud/Software": [
-    { name: "AWS", icon: aws, description: "Orchestrated cloud deployments with AWS Lambda, S3, and EC2, optimizing performance." },
-    { name: "Linux", icon: linux, description: "Built a small ecosystem with DNS and DHCP servers during coursework, gaining hands-on experience in network infrastructure." },
-    { name: "GitHub", icon: github, description: "Got skills to manage version control, ensuring smooth collaboration and keeping updates of work pristine." },
-    { name: "Jira", icon: jira, description: "Facilitated agile development by planning and tracking sprints with precision." },
-  ],
+  { name: "React.js", icon: `${STATIC_ASSESTS}react_js.svg`, description: "Used extensively to build fintech products throughout my career and continue leveraging it for personal projects." },
+  { name: "Next.js", icon: `${STATIC_ASSESTS}next_js.svg`, description: "Built performant, server-rendered applications with API routes and SSR capabilities for improved UX and SEO." },
+  { name: "JavaScript", icon: `${STATIC_ASSESTS}javascript.svg`, description: "Developed high-performance, interactive components for seamless user engagement." },
+  { name: "TypeScript", icon: `${STATIC_ASSESTS}typescript.svg`, description: "Enhanced code quality and developer experience with static typing in React and backend projects." },
+  { name: "Redux", icon: `${STATIC_ASSESTS}redux.svg`, description: "Implemented scalable state management solutions for fintech applications and continue using it in personal projects." },
+],
+
+Backend: [
+  { name: "Ruby on Rails", icon: `${STATIC_ASSESTS}ruby_on_rails.svg`, description: "Designed and optimized RESTful APIs, ensuring high reliability and performance." },
+  { name: "PostgreSQL", icon: `${STATIC_ASSESTS}postgresql.svg`, description: "Structured robust and scalable database models, powering critical operations." },
+  { name: "Python", icon: `${STATIC_ASSESTS}python.svg`, description: "Developed automation scripts and backend services, streamlining workflows." },
+  { name: "Rspec", icon: `${STATIC_ASSESTS}rspec.svg`, description: "Wrote comprehensive test suites, ensuring the stability and reliability of backend services." },
+  { name: "Supabase", icon: `${STATIC_ASSESTS}supabase.svg`, description: "Integrated authentication, real-time subscriptions, and storage for full-stack apps with minimal overhead." },
+],
+
+"Cloud/Software": [
+  { name: "AWS", icon: `${STATIC_ASSESTS}aws.svg`, description: "Orchestrated cloud deployments with AWS Lambda, S3, and EC2, optimizing performance." },
+  { name: "Linux", icon: `${STATIC_ASSESTS}linux.svg`, description: "Built a small ecosystem with DNS and DHCP servers during coursework, gaining hands-on experience in network infrastructure." },
+  { name: "GitHub", icon: `${STATIC_ASSESTS}github.svg`, description: "Got skills to manage version control, ensuring smooth collaboration and keeping updates of work pristine." },
+  { name: "Jira", icon: `${STATIC_ASSESTS}jira.svg`, description: "Facilitated agile development by planning and tracking sprints with precision." },
+],
+
 };
+const icons = Object.values(skillCategories).flat().map(skill => skill.icon)
 
 const Skills = () => {
 

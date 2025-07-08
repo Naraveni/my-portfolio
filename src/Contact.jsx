@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 
-// Import SVGs
-import LinkedInIcon from '/src/assets/linkedin.svg';
-import GitHubIcon from '/src/assets/github.svg';
-import EmailIcon from '/src/assets/email.svg';
-import Phone from '/src/assets/phone.png'
+import { STATIC_ASSESTS } from './utils/constants';
 
 const Contact = () => {
   const [inView, setInView] = useState(false);
@@ -60,7 +57,7 @@ const Contact = () => {
       >
         <div className="text-lg sm:text-base flex items-center space-x-4 transition-all hover:scale-150">
           <img
-            src={EmailIcon}
+            src={`${STATIC_ASSESTS}email.svg`}
             alt="Email"
             className="w-8 h-8 sm:w-6 sm:h-6"
             style={{ transition: 'transform 0.3s ease' }}
@@ -77,14 +74,14 @@ const Contact = () => {
 
         <div className="text-lg sm:text-base flex items-center space-x-4 transition-all hover:scale-150">
           <img
-            src={LinkedInIcon}
+            src={`${STATIC_ASSESTS}linkedin.svg`}
             alt="LinkedIn"
             className="w-8 h-8 sm:w-6 sm:h-6"
             style={{ transition: 'transform 0.3s ease' }}
           />
           <span className="font-semibold">LinkedIn: </span>
           <a
-            href="https://www.linkedin.com/in/harsha-bana-83bab319b/"
+            href="https://www.linkedin.com/in/harsha-b-83bab319b/"
             className="text-yellow-300"
             target="_blank"
             rel="noopener noreferrer"
@@ -96,7 +93,7 @@ const Contact = () => {
 
         <div className="text-lg sm:text-base flex items-center space-x-4 transition-all hover:scale-150">
           <img
-            src={GitHubIcon}
+            src={`${STATIC_ASSESTS}github.svg`}
             alt="GitHub"
             className="w-8 h-8 sm:w-6 sm:h-6"
             style={{ transition: 'transform 0.3s ease' }}
@@ -115,7 +112,7 @@ const Contact = () => {
 
         <div className="text-lg sm:text-base flex items-center space-x-4 hover:scale-150">
         <img
-            src={Phone}
+            src={`${STATIC_ASSESTS}phone.png`}
             alt="Phone"
             className="w-8 h-8 sm:w-6 sm:h-6"
             style={{ transition: 'transform 0.3s ease' }}

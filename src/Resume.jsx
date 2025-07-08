@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { motion,AnimatePresence } from 'framer-motion';
 
 import { WiredButton } from 'wired-elements-react';
 import { RESUME, RESUME_IMAGE } from './utils/constants';

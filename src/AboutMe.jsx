@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import myProfileImage from "/src/assets/my_profile_image.jpg";
 import { motion } from "framer-motion";
+import { PROFILE_IMAGE } from "./utils/constants";
 
 const AboutMe = () => {
   const [inView, setInView] = useState(false);
@@ -72,7 +72,7 @@ const AboutMe = () => {
         transition={{ type: "spring", stiffness: 50, duration: 1 }}
       >
         <img
-          src={myProfileImage}
+          src={PROFILE_IMAGE}
           alt="My Profile"
           className="w-3/5 h-auto rounded-lg shadow-lg"
         />
