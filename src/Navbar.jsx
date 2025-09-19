@@ -13,6 +13,7 @@ const NavBar = () => {
     "hover:bg-yellow-500/100",
     "hover:bg-purple-500/100",
     "hover:bg-pink-500/100",
+    "hover:bg-green-800/100",
   ];
 
   const menuItems = [
@@ -21,7 +22,8 @@ const NavBar = () => {
     { name: "Projects", path: "/projects" },
     { name: "Skills", path: "/skills" },
     { name: "Resume", path: "/resume" },
-    { name: "Contact", path: "/contact" }
+    { name: "Contact", path: "/contact" },
+    
   ];
 
   return (

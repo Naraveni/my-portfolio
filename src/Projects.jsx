@@ -2,9 +2,20 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { WiredCard, WiredButton } from "wired-elements-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { STATIC_ASSESTS } from "./utils/constants";
+import { STATIC_ASSESTS, PROJECT_BUDDY_IMAGE } from "./utils/constants";
 
 const projects = [
+  {
+  id: "projectBuddy",
+  title: "Project Buddy - Collaboration Platform",
+  image: `${PROJECT_BUDDY_IMAGE}`,
+  description:
+    "Developed a full-stack collaboration platform using Next.js and Supabase, designed to connect students and professionals for project-based learning. Implemented secure authentication and role-based access control with Supabase Auth. Designed real-time project boards and chat features leveraging Supabase’s serverless database and subscription model. Focused on scalability, responsive UI (Tailwind CSS), and intuitive user experience to enhance peer-to-peer collaboration.",
+  links: [
+    { href: "https://github.com/Naraveni/project-buddy", text: "GitHub" }
+  ],
+}
+,
   {
     id: "vsCode",
     title: "VS Code Extension - Code Highlighter",
@@ -80,11 +91,13 @@ const Projects = () => {
             transition={{ type: "tween", duration: 0.6 }}
           >
             <WiredCard className="p-6 rounded-lg shadow-lg flex flex-col items-center w-2/3 h-auto mx-4 sm:mx-8">
-              <img
-                src={projects[index].image}
-                alt={projects[index].title}
-                className="w-full h-48 object-cover rounded-lg shadow-lg mb-6"
-              />
+              <div className="w-full h-[250px] flex items-center justify-center mb-6">
+    <img
+      src={projects[index].image}
+      alt={projects[index].title}
+      className="max-h-full max-w-full object-contain rounded-lg"
+    />
+  </div>
               <div className="text-center">
                 <h3 className="text-2xl font-semibold mb-4">{projects[index].title}</h3>
                 <p className="text-lg mb-4" style={{ fontFamily: "ParagraphFont" }}>
