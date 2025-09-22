@@ -5,7 +5,7 @@ const experiences = [
   {
     title: "Full Stack Developer | Zaggle Prepaid Ocean Services Pvt. Ltd",
     location: "Hyderabad, India",
-    duration: "Jan 2021 – Jul 2023",
+    duration: "Jan 2021 – Aug 2023",
     description: [
   "Involved in requirements gathering, design discussions, and client-side code review meetings to align with product needs.",
   "Designed and developed responsive web applications using Ruby on Rails, React.js, Redux, TypeScript, and JavaScript, improving frontend load times by 30%.",
@@ -49,7 +49,7 @@ const experiences = [
     {
     title: "Web Development Intern | Sree Vidyanikethan Engineering College ",
     location: "Tirupati, India",
-    duration: "Sep 2021 – Dec 2021",
+    duration: "Jan 2020 – Mar 2022",
     description: [
   "Developed and maintained the college HR portal for staff, enabling digital attendance tracking (clock-in/clock-out) and leave management.",
   "Built frontend modules with JavaScript, HTML5, and CSS3 integrated with backend logic in SQL for staff record management.",
