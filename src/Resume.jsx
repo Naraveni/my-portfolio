@@ -49,11 +49,6 @@ const Resume = () => {
         transition={{ type: 'spring', stiffness: 50, duration: 1 }}
         className="flex flex-col md:flex-row items-center justify-around max-w-4xl"
       >
-        <img
-          src={RESUME_IMAGE}
-          alt="My Resume"
-          className="md:w-1/4 lg:w-1/4 sm:w-1/4 sm:h-1/3 mb-4 md:mb-0"
-        />
         <a
           href={RESUME}
           download
