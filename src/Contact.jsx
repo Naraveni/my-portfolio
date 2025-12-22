@@ -81,7 +81,7 @@ const Contact = () => {
           />
           <span className="font-semibold">LinkedIn: </span>
           <a
-            href="https://www.linkedin.com/in/harsha-b-83bab319b/"
+            href="https://www.linkedin.com/in/harsha-vardhan-reddy-bana-83bab319b/"
             className="text-yellow-300"
             target="_blank"
             rel="noopener noreferrer"
@@ -123,7 +123,7 @@ const Contact = () => {
             className="text-yellow-300"
             style={{ fontFamily: "ParagraphFont" }}
           >
-            475-234-9972
+            475-234-9772
           </a>
         </div>
       </motion.div>

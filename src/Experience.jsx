@@ -5,20 +5,19 @@ const experiences = [
   {
     title: "Full Stack Developer | Zaggle Prepaid Ocean Services Pvt. Ltd",
     location: "Hyderabad, India",
-    duration: "Feb 2022 – July 2023",
+    duration: "Jan 2021 – Aug 2023",
     description: [
-      "Built secure backend services using Java Spring Boot, Ruby on Rails, Node.js, and PostgreSQL for fintech platforms.",
-      "Designed REST APIs for payments, digital wallets, and HR integrations supporting high-volume transactions.",
-      "Developed responsive dashboards and reusable UI components using React and TypeScript.",
-      "Implemented JWT authentication, role-based access logic, and session management aligned with OWASP standards.",
-      "Improved backend response time by optimizing SQL queries and reducing unnecessary API calls.",
-      "Translated business requirements into technical specifications by working closely with product owners.",
-      "Set up CI/CD workflows and supported deployments on AWS using EC2, S3, and IAM.",
-      "Enhanced data accuracy and reliability through better validation rules and API contracts.",
-      "Collaborated with QA and DevOps teams to streamline release cycles and reduce production issues.",
-      "Integrated third-party payment systems and internal HR modules into existing architecture.",
-      "Created technical documentation, API specifications, and release notes for engineering and operations teams.",
-      "Partnered with UI/UX teams to ensure smooth, consistent user experiences across devices."
+      "Worked closely with product and business teams to gather requirements and translate them into scalable software solutions.",
+      "Designed and developed responsive web applications using Ruby on Rails, React.js, Redux, TypeScript, and JavaScript, improving frontend load times by 30%.",
+      "Built and integrated RESTful APIs across microservices, supporting 10,000+ daily financial transactions.",
+      "Implemented JWT-based authentication, session management, and role-based access control following OWASP security standards.",
+      "Created modular, reusable UI components and frontend libraries to accelerate development across teams.",
+      "Participated across the full SDLC including design, development, testing, bug fixing, and production deployment.",
+      "Worked closely with QA teams on UAT, integration testing, and regression testing using RSpec and Capybara.",
+      "Troubleshot and resolved critical production issues, improving application stability and turnaround time.",
+      "Used Git, GitHub, and JIRA in an Agile/Scrum environment for version control and sprint execution.",
+      "Collaborated with internal teams to support finance, HR, and purchasing workflows.",
+      "Implemented CI/CD pipelines to streamline builds, testing, and deployments, improving release efficiency."
     ],
     hoverColor: "hover:bg-[#4ADC7F]",
     activeColor: "bg-[#4ADC7F]",
@@ -27,47 +26,39 @@ const experiences = [
   {
     title: "Web Developer | Teaching Assistant | University of New Haven",
     location: "West Haven, CT",
-    duration: "Aug 2024 – May 2025",
+    duration: "Jun 2024 – May 2025",
     description: [
-      "Supported development of course applications and tools for Algorithms, Databases, and Web Development programs.",
-      "Guided 20+ capstone teams through planning, version control, UI implementation, deployment, and documentation.",
-      "Built backend logic in Django and Java while supporting front-end components using JavaScript and React.",
-      "Designed SQL schemas and optimized queries to improve performance and reduce latency in student submissions.",
-      "Conducted workshops on Git workflows, debugging patterns, secure coding, and CI/CD basics.",
-      "Created reusable project templates and starter kits that standardized student onboarding.",
-      "Helped students debug complex issues in algorithms, data structures, and web application logic.",
-      "Built small-scale internal tools for faculty using Python, SQL, and REST API integrations.",
-      "Assisted students with cloud deployments, strengthening their understanding of real-world development environments.",
-      "Wrote documentation covering engineering best practices, testing approaches, and SDLC guidelines.",
-      "Collaborated with professors to refine project rubrics and technical expectations.",
-      "Supported classroom labs by reviewing designs, API structures, and frontend components."
+      "Provided technical and academic support for Algorithms, Data Structures, Databases, and Web Development courses.",
+      "Conducted weekly lab sessions for 80+ students, assisting with programming, debugging, and project development.",
+      "Mentored 20+ capstone teams through full project lifecycles including planning, version control, UI development, and deployment.",
+      "Built backend logic using Python, Django, and Java while supporting frontend development with JavaScript and React.",
+      "Designed SQL schemas and optimized queries to improve performance and reduce latency.",
+      "Reviewed student code to ensure adherence to academic and industry coding standards.",
+      "Facilitated workshops on Git workflows, debugging strategies, secure coding, and SDLC practices.",
+      "Created reusable project templates and starter kits to standardize onboarding.",
+      "Developed small internal tools for faculty using Python, SQL, and REST APIs.",
+      "Assisted students with cloud deployments and real-world development workflows."
     ],
     hoverColor: "hover:bg-[#F56565]",
     activeColor: "bg-[#F56565]",
   },
 
   {
-    title: "Full Stack Developer | Net Solutions",
-    location: "Chandigarh, India",
-    duration: "Jan 2020 – Jan 2022",
+    title: "Web Development Intern | Sree Vidyanikethan Engineering College",
+    location: "Tirupati, India",
+    duration: "Jan 2020 – Mar 2022",
     description: [
-      "Built frontend modules using JavaScript, HTML5, CSS3, and React to support client-facing applications.",
-      "Developed backend logic using Node.js and integrated REST APIs into various interfaces.",
-      "Improved database performance by optimizing SQL queries and reducing execution time.",
-      "Designed reusable UI components that increased development speed for multiple teams.",
-      "Participated in Agile sprints, including planning, estimation, and code reviews.",
-      "Identified UI bugs and application issues, providing fast and effective resolutions.",
-      "Collaborated with designers and backend developers to refine system workflows and improve usability.",
-      "Implemented backend features supporting authentication, form validation, and core workflows.",
-      "Helped deploy builds to staging environments and validated features for client demos.",
-      "Mentored junior developers on debugging, Git best practices, and architecture patterns.",
-      "Improved reliability through enhanced error-handling strategies across applications.",
-      "Authored documentation for feature behavior, workflows, and implementation details."
+      "Developed and maintained a web-based HR portal for staff attendance and leave management.",
+      "Built frontend interfaces using JavaScript, HTML5, and CSS3 integrated with SQL-based backend logic.",
+      "Optimized SQL queries, reducing HR data retrieval time by 25%.",
+      "Worked with faculty and staff to gather requirements and translate them into functional workflows.",
+      "Assisted in migrating paper-based HR processes into a centralized digital platform."
     ],
     hoverColor: "hover:bg-[#BE83FA]",
     activeColor: "bg-[#BE83FA]",
   },
 ];
+
 
 
 
